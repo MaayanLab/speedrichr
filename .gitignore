@@ -1,0 +1,14 @@
+/build/
+/data/
+*.gmt
+*.txt
+*.tsv
+/src/main/webapp/WEB-INF/data/
+.DS_Store
+.env
+/lib/
+*.jar
+*.log
+/bin/
+.classpath
+*.war
