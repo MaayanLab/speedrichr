@@ -3,7 +3,6 @@
 *.gmt
 *.txt
 *.tsv
-/src/main/webapp/WEB-INF/data/
 .DS_Store
 .env
 /lib/
@@ -12,3 +11,4 @@
 /bin/
 .classpath
 *.war
+*.log
