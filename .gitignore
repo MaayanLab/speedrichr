@@ -6,7 +6,6 @@
 .DS_Store
 .env
 /lib/
-*.jar
 *.zip
 *.log
 /bin/
