@@ -4,6 +4,8 @@ This is the API backend for Enrichr. It supports faster in memory data structure
 
 https://mssm-enrichr.s3.amazonaws.com/enrichrdata.zip
 
+This file should be extracted into the /src/main/webapp/WEB-INF/data/ folder.
+
 ## Building a new image and updating gene list files
 
 The data used by Speedrichr are stored directly in the docker image. To update or add a new GMT file the following steps have to be taken:
