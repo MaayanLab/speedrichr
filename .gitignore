@@ -7,6 +7,7 @@
 .env
 /lib/
 *.jar
+*.zip
 *.log
 /bin/
 .classpath
