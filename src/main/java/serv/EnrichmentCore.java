@@ -12,10 +12,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
@@ -53,6 +55,8 @@ public class EnrichmentCore extends HttpServlet {
 	public HashMap<Integer, String> idToSymbol = new HashMap<Integer, String>();
 	
 	public HashMap<String, String[]> listcache = new HashMap<String, String[]>();
+	public ArrayList<String> listcachequeue = new ArrayList<String>();
+	public int queuesize = 10000;
 	public HashMap<String, String> listcachedesc = new HashMap<String, String>();
 	public Connection connection;
 	public SQLmanager sql;
@@ -129,6 +133,27 @@ public class EnrichmentCore extends HttpServlet {
 			json += "] }";
 			json = json.replace(", ]", "]");
 			out.write(json);
+		}
+		else if(pathInfo.matches("^/datasetStatistics")){
+			PrintWriter out = response.getWriter();
+			response.setHeader("Content-Type", "application/json");
+			StringBuffer sb = new StringBuffer();
+			
+			try{
+				String datafolder = "/usr/local/tomcat/webapps/speedrichr/WEB-INF/data/";
+
+				BufferedReader br = new BufferedReader(new FileReader(new File(datafolder+"datasetStatistics.json")));
+				String line = ""; // read header
+				
+				while((line = br.readLine())!= null){
+					sb.append(line);
+				}
+				br.close();
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}	
+			out.write(sb.toString());
 		}
 		else if(pathInfo.matches("^/listlibs")){
 			//localhost:8080/EnrichmentAPI/api/listlibs
@@ -309,6 +334,7 @@ public class EnrichmentCore extends HttpServlet {
 			json = json.replace(", }", "}");
 			json = json.replace(", ]", "]");
 			PrintWriter out = response.getWriter();
+			response.setHeader("Content-Type", "application/json");
 			out.write(json);
 
 			System.out.println("Elapsed time: "+(System.currentTimeMillis() - time));
@@ -507,13 +533,19 @@ public class EnrichmentCore extends HttpServlet {
 			Arrays.sort(gene_split);
 
 			if(gene_split.length < 50000){
-				int hv = gene_split.hashCode();
+				int hv = Math.abs(Arrays.hashCode(gene_split));
 				String hvs = Integer.toHexString(hv);
 
 				HashSet<String> bgenes = new HashSet<String>();
 				for(String s : gene_split){
 					bgenes.add(s);
 				}
+
+				if(backgroundcache.size() > queuesize){
+					String keys[] = backgroundcache.keySet().toArray(new String[0]);
+					backgroundcache.remove(keys[1]);
+				}
+
 				backgroundcache.put(hvs, bgenes);
 
 				StringBuffer sb = new StringBuffer();
@@ -698,10 +730,18 @@ public class EnrichmentCore extends HttpServlet {
 			filecontent = request.getPart("description").getInputStream();
 			String desc = convertStreamToString(filecontent);
 			
-			int hv = gene_split.hashCode();
+			int hv = Math.abs(Arrays.hashCode(gene_split));
 			String hvs = Integer.toHexString(hv);
 			listcache.put(hvs, gene_split);
 			listcachedesc.put(hvs, desc);
+			listcachequeue.add(hvs);
+
+			if(listcachequeue.size() > queuesize){
+				String key = listcachequeue.get(0);
+				listcache.remove(key);
+				listcachedesc.remove(key);
+				listcachequeue.remove(0);
+			}
 
 			StringBuffer sb = new StringBuffer();
 			sb.append("{").append("\"userListId\":").append(hv).append(", \"shortId\": \"").append(hvs).append("\"}");

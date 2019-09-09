@@ -9,16 +9,15 @@ with open ("/Users/maayanlab/OneDrive/speedrichr/src/main/webapp/WEB-INF/data/hu
         backgroundgenes=myfile.read()
 
 
+"https://amp.pharm.mssm.edu/Enrichr/datasetStatistics"
+
+
 
 
 baseurl = "https://amp.pharm.mssm.edu/speedrichr/api/"
-#baseurl = "http://localhost:8666/speedrichr/api/"
+baseurl = "http://localhost:8666/speedrichr/api/"
 
 library = "TRANSFAC_and_JASPAR_PWMs"
-
-
-
-
 
 
 
@@ -38,7 +37,7 @@ genes_str = '\n'.join([
     'LINC00662', 'CCDC101', 'PPM1B', 'KANSL1L', 'CRYZL1', 'ANAPC16', 'TMCC1',
     'CDH8', 'RBM11', 'CNPY2', 'HSPA1L', 'CUL2', 'PLBD2', 'LARP7', 'TECPR2', 
     'ZNF302', 'CUX1', 'MOB2', 'CYTH2', 'SEC22C', 'EIF4E3', 'ROBO2',
-    'ADAMTS9-AS2', 'CXXC1', 'LINC01314', 'ATF7', 'ATP5F1'
+    'ADAMTS9-AS2', 'CXXC1', 'LINC01314', 'ATF7'
 ])
 
 description = 'Example gene list'
@@ -46,6 +45,12 @@ payload = {
     'list': (None, genelistfile),
     'description': (None, description)
 }
+
+payload = {
+    'list': (None, genes_str),
+    'description': (None, description)
+}
+
 
 OXENRICHR_URL = baseurl+'addList'
 response = requests.post(OXENRICHR_URL, files=payload)
