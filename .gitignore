@@ -12,4 +12,4 @@
 .classpath
 *.war
 *.log
-.vscode
+.vscode/settings.json
