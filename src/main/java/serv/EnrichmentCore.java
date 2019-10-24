@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -17,7 +16,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
@@ -79,19 +77,19 @@ public class EnrichmentCore extends HttpServlet {
 		// TODO Auto-generated method stub
 		f = new FastFisher(40000);
 		
-		sql = new SQLmanager();
+		//sql = new SQLmanager();
 		try {
-			connection = DriverManager.getConnection("jdbc:mysql://"+sql.database+"?rewriteBatchedStatements=true", sql.user, sql.password);
+			//connection = DriverManager.getConnection("jdbc:mysql://"+sql.database+"?rewriteBatchedStatements=true", sql.user, sql.password);
 			
 			System.out.println("Start buffering libraries");
 			long time = System.currentTimeMillis();
-			loadGenetranslation();
-			loadGenemapping();
+			//loadGenetranslation();
+			//loadGenemapping();
 			loadGMT();
-			loadBackground();
-			System.out.println("Background load: "+background.size()+"\nGMTs loaded: "+gmts.size()+"\nElapsed time: "+(System.currentTimeMillis() - time));
+			//loadBackground();
+			//System.out.println("Background load: "+background.size()+"\nGMTs loaded: "+gmts.size()+"\nElapsed time: "+(System.currentTimeMillis() - time));
 			
-			connection.close();
+			//connection.close();
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -448,84 +446,7 @@ public class EnrichmentCore extends HttpServlet {
 		String pathInfo = request.getPathInfo();
 		System.out.println("POST: |"+pathInfo+"|");
 		
-		if(pathInfo.matches("^/uploadgmt")){
-			
-			// get request parameters for userID and password
-			String user = request.getParameter("user");
-			String pwd = request.getParameter("pwd");
-			String role = "user";
-			
-			System.out.println(user+" "+pwd+" "+role+" "+request.getParameter("gmtname"));
-			boolean success = false;
-			
-			Connection connection;
-			try {
-				connection = DriverManager.getConnection("jdbc:mysql://"+sql.database, sql.user, sql.password);
-				
-				// create the java statement and execute
-				String query = "SELECT * FROM userinfo WHERE username='"+user+"'";
-				Statement stmt = connection.createStatement();
-				ResultSet rs = stmt.executeQuery(query);
-				
-				if(rs.next()) {
-					String password = rs.getString("password");
-					String salt = rs.getString("salt");
-					role = rs.getString("role");
-					
-					String inputpass = md5hash(pwd+salt);
-					if(inputpass.equals(password) && role.equals("admin")) {
-						success = true;
-					}
-				}
-				else {
-					// no user found with the specified username
-					success = false;
-				}
-	    	}
-			catch(Exception e){
-				e.printStackTrace();
-			}
-			
-			System.out.println("success: "+success);
-			
-			if(success) {
-				// Upload gmt file
-				
-				String name = request.getParameter("gmtname");
-		    	String category = request.getParameter("category");
-				String description = request.getParameter("description");
-				String text = request.getParameter("text");
-				String gmtcontent = request.getParameter("gmtcontent");
-				
-		        String fileContent = gmtcontent;
-		        
-		        GMT gmt = new GMT(0, name, category, description, text);
-				gmt.core = this;
-				
-		        String[] lines = fileContent.split("\\s*\\r?\\n\\s*");
-		        int counter = 0;
-		        for(String l : lines) {
-		    		String[] sp = l.split("\t");
-		    		
-		    		counter++;
-		    		
-		    		HashSet<String> genes = new HashSet<String>();
-		    		for(int j=2; j<sp.length; j++) {
-		    			genes.add(sp[j].split(",")[0].toUpperCase());
-		    		}
-		    		
-		    		GMTGeneList gl = new GMTGeneList(counter, sp[0], sp[1], genes, sql);
-		    		gmt.genelists.put(gl.id, gl);
-		        }
-		        gmt.writeGMT(sql);
-			}
-			
-			PrintWriter out = response.getWriter();
-			response.setHeader("Content-Type", "application/json");
-			String json = "{\"status\": \"completed\", \"endpoint:\" : \""+pathInfo+"\"}";
-			out.write(json);
-		}
-		else if(pathInfo.equals("/addbackground")){
+		if(pathInfo.equals("/addbackground")){
 			String backgroundset = request.getParameter("background");
 			
 			backgroundset = backgroundset.toUpperCase();
