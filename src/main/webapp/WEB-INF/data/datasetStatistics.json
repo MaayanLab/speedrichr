@@ -1079,12 +1079,19 @@
             "numTerms": 5261
         },
         {
-            "geneCoverage": 13967,
-            "genesPerTerm": 150.0,
-            "libraryName": "UK_Biobank_GWAS",
+            "geneCoverage": 14148,
+            "genesPerTerm": 122.0,
+            "libraryName": "UK_Biobank_GWAS_v1",
             "link": "https://www.ukbiobank.ac.uk/tag/gwas/",
-            "numTerms": 990
+            "numTerms": 857
         },
+        {
+            "geneCoverage": 9813,
+            "genesPerTerm": 49,
+            "libraryName": "BioPlanet_2019",
+            "link": "https://tripod.nih.gov/bioplanet/",
+            "numTerms": 1510
+        },        
         {
             "geneCoverage": 17464,
             "genesPerTerm": 63,
