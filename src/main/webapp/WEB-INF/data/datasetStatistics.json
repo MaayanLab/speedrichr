@@ -507,14 +507,14 @@
         {
             "geneCoverage": 31132,
             "genesPerTerm": 298.0,
-            "libraryName": "Single_Gene_Perturbations_from_GEO_up",
+            "libraryName": "Gene_Perturbations_from_GEO_up",
             "link": "http://www.ncbi.nlm.nih.gov/geo/",
             "numTerms": 2460
         },
         {
             "geneCoverage": 30832,
             "genesPerTerm": 302.0,
-            "libraryName": "Single_Gene_Perturbations_from_GEO_down",
+            "libraryName": "Gene_Perturbations_from_GEO_down",
             "link": "http://www.ncbi.nlm.nih.gov/geo/",
             "numTerms": 2460
         },
@@ -1061,14 +1061,14 @@
             "geneCoverage": 7744,
             "genesPerTerm": 363.0,
             "libraryName": "DepMap_WG_CRISPR_Screens_Broad_CellLines_2019",
-            "link": "",
+            "link": "https://depmap.org/",
             "numTerms": 558
         },
         {
             "geneCoverage": 6204,
             "genesPerTerm": 387.0,
             "libraryName": "DepMap_WG_CRISPR_Screens_Sanger_CellLines_2019",
-            "link": "",
+            "link": "https://depmap.org/",
             "numTerms": 325
         },
         {
@@ -1091,13 +1091,55 @@
             "libraryName": "BioPlanet_2019",
             "link": "https://tripod.nih.gov/bioplanet/",
             "numTerms": 1510
-        },        
+        },
+        {
+            "geneCoverage": 1397,
+            "genesPerTerm": 13,
+            "libraryName": "ClinVar_2019",
+            "link": "https://www.ncbi.nlm.nih.gov/clinvar/",
+            "numTerms": 182
+        },
+        {
+            "geneCoverage": 9116,
+            "genesPerTerm": 22,
+            "libraryName": "PheWeb_2019",
+            "link": "http://pheweb.sph.umich.edu/",
+            "numTerms": 1161
+        },
         {
             "geneCoverage": 17464,
             "genesPerTerm": 63,
             "libraryName": "DisGeNET",
             "link": "https://www.disgenet.org",
             "numTerms": 9828
-        }
+        },
+        {
+            "geneCoverage": 394,
+            "genesPerTerm": 73,
+            "libraryName": "HMS_LINCS_KinomeScan",
+            "link": "http://lincs.hms.harvard.edu/kinomescan/",
+            "numTerms": 148 
+        },
+        {
+            "geneCoverage": 11851,
+            "genesPerTerm": 586,
+            "libraryName": "CCLE_Proteomics_2020",
+            "link": "https://portals.broadinstitute.org/ccle",
+            "numTerms": 378 
+        },
+        {
+            "geneCoverage": 8189,
+            "genesPerTerm": 421,
+            "libraryName": "ProteomicsDB_2020",
+            "link": "https://www.proteomicsdb.org/",
+            "numTerms": 913 
+        },     
+        {
+            "geneCoverage": 18704,
+            "genesPerTerm": 100,
+            "libraryName": "lncHUB_lncRNA_Co-Expression",
+            "link": "https://amp.pharm.mssm.edu/lnchub/",
+            "numTerms": 3729
+        } 
     ]
 }
