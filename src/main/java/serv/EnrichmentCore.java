@@ -854,9 +854,21 @@ public class EnrichmentCore extends HttpServlet {
 	    			int totalBgGenes = 20000;
 	    			int gmtListSize =  gmtlist.genearray.length;
 	    			int numOverlap = overlap.size();
-	    			double oddsRatio = (numOverlap*1.0/(gmtListSize))/(numGenelist*1.0/(totalBgGenes));
-	    			double pvalue = f.getRightTailedP(numOverlap,(gmtListSize - numOverlap), numGenelist-numOverlap, (totalBgGenes - numGenelist - gmtListSize + numOverlap));	
-	    			
+					
+					int a = numOverlap;
+					int b = gmtListSize - numOverlap;
+					int c = numGenelist - numOverlap;
+					int d = totalBgGenes - numGenelist - gmtListSize + numOverlap;
+
+					double pvalue = 1;
+					double oddsRatio = 1;
+
+					//double oddsRatio = (numOverlap*1.0/(gmtListSize))/(numGenelist*1.0/(totalBgGenes));
+					if(a > 0){
+						pvalue = f.getRightTailedP(a, b, c, d);
+						oddsRatio = (1.0 * a * d) / (1.0 * b * c);
+					}
+					
 	    			if(numOverlap > 0 || pvalue < 0.05) {
 						Overlap over = new Overlap(gmtlist.id, overlap, pvalue, pvalue*gmt.genelists.size(), oddsRatio, gmtListSize);
 						over.name = gmtlist.name;
@@ -905,13 +917,25 @@ public class EnrichmentCore extends HttpServlet {
 						}
 					}
 					
-					int numGenelist = genesetSet.size();
-	    			int totalBgGenes = _background.size();
-	    			int gmtListSize =  filteredGmtSize;
+					int numGenelist = _geneset.length;
+	    			int totalBgGenes = 20000;
+	    			int gmtListSize =  gmtlist.genearray.length;
 	    			int numOverlap = overlap.size();
-	    			double oddsRatio = (numOverlap*1.0/(gmtListSize))/(numGenelist*1.0/(totalBgGenes));
-	    			double pvalue = f.getRightTailedP(numOverlap,(gmtListSize - numOverlap), numGenelist-numOverlap, (totalBgGenes - numGenelist - gmtListSize + numOverlap));	
-	    			
+					
+					int a = numOverlap;
+					int b = gmtListSize - numOverlap;
+					int c = numGenelist - numOverlap;
+					int d = totalBgGenes - numGenelist - gmtListSize + numOverlap;
+
+					double pvalue = 1;
+					double oddsRatio = 1;
+					//double oddsRatio = (numOverlap*1.0/(gmtListSize))/(numGenelist*1.0/(totalBgGenes));
+
+					if(a > 0){
+						pvalue = f.getRightTailedP(a, b, c, d);
+						oddsRatio = (1.0 * a * d) / (1.0 * b * c);
+					}
+					
 	    			if(numOverlap > 0 || pvalue < 0.05) {
 						Overlap over = new Overlap(gmtlist.id, overlap, pvalue, pvalue*gmt.genelists.size(), oddsRatio, gmtListSize);
 						over.name = gmtlist.name;
