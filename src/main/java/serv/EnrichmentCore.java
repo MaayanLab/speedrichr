@@ -301,12 +301,23 @@ public class EnrichmentCore extends HttpServlet {
 				
 				sb.append("\"").append(gmtName).append("\" : [");
 				int rank = 1;
-				for(NameNumber zippair : zip){
+				
+				double[] pvs = new double[zip.length];
+				for(int i=0; i<zip.length; i++){
+					int genesetId = zippair.name;
+					pvs[i] = enrichment.get(gmtName).get(genesetId).pval;
+				}
+				FDR fdr = new FDR(pvs);
+				fdr.calculate();
+				double[] cpv = fdr.getAdjustedPvalues();
+
+				for(int i=0; i<zip.length; i++){
+					NameNumber zippair = zip[i];
 					int genesetId = zippair.name;
 					String genesetName = enrichment.get(gmtName).get(genesetId).name;
 
 					double pval = enrichment.get(gmtName).get(genesetId).pval;
-					double pvalCorr = enrichment.get(gmtName).get(genesetId).pvalc;
+					double pvalCorr = cpv[i];
 					double odds = enrichment.get(gmtName).get(genesetId).odds;
 					
 					HashSet<String> overlap = enrichment.get(gmtName).get(genesetId).overlap;
@@ -320,7 +331,7 @@ public class EnrichmentCore extends HttpServlet {
 						sb.append(odds).append(", ");
 						sb.append(-Math.log(pval)*odds).append(", ");
 						sb.append("[\"").append(geneListString).append("\"],");
-						sb.append(Math.min(1,pvalCorr/rank)).append(", 0, 0 ], ");
+						sb.append(Math.min(1,pvalCorr)).append(", 0, 0 ], ");
 						rank++;
 					}
 				}
@@ -385,13 +396,23 @@ public class EnrichmentCore extends HttpServlet {
 					}
 				});
 				
+				double[] pvs = new double[zip.length];
+				for(int i=0; i<zip.length; i++){
+					int genesetId = zippair.name;
+					pvs[i] = enrichment.get(gmtName).get(genesetId).pval;
+				}
+				FDR fdr = new FDR(pvs);
+				fdr.calculate();
+				double[] cpv = fdr.getAdjustedPvalues();
+
 				int rank = 1;
-				for(NameNumber zippair : zip){
+				for(int i=0; i<zip.length; i++){
+					NameNumber zippair = zip[i];
 					int genesetId = zippair.name;
 					String genesetName = enrichment.get(gmtName).get(genesetId).name;
 
 					double pval = enrichment.get(gmtName).get(genesetId).pval;
-					double pvalCorr = enrichment.get(gmtName).get(genesetId).pvalc;
+					double pvalCorr = cpv[i];
 					double odds = enrichment.get(gmtName).get(genesetId).odds;
 					
 					HashSet<String> overlap = enrichment.get(gmtName).get(genesetId).overlap;
@@ -404,7 +425,7 @@ public class EnrichmentCore extends HttpServlet {
 						sb.append( genesetName ).append("\t");
 						sb.append( overArr.length ).append( "/" ).append( enrichment.get(gmtName).get(genesetId).gmtlistsize ).append("\t");
 						sb.append( pval ).append("\t");
-						sb.append( Math.min(1,pvalCorr/rank) ).append("\t");
+						sb.append( Math.min(1,pvalCorr) ).append("\t");
 						sb.append( 0 ).append("\t");
 						sb.append( 0 ).append("\t");
 						sb.append( odds ).append("\t");
@@ -604,12 +625,23 @@ public class EnrichmentCore extends HttpServlet {
 				
 				sb.append("\"").append(gmtName).append("\" : [");
 				int rank = 1;
-				for(NameNumber zippair : zip){
+				
+				double[] pvs = new double[zip.length];
+				for(int i=0; i<zip.length; i++){
+					int genesetId = zippair.name;
+					pvs[i] = enrichment.get(gmtName).get(genesetId).pval;
+				}
+				FDR fdr = new FDR(pvs);
+				fdr.calculate();
+				double[] cpv = fdr.getAdjustedPvalues();
+
+				for(int i=0; i<zip.length; i++){
+					NameNumber zippair = zip[i];
 					int genesetId = zippair.name;
 					String genesetName = enrichment.get(gmtName).get(genesetId).name;
 
 					double pval = enrichment.get(gmtName).get(genesetId).pval;
-					double pvalCorr = enrichment.get(gmtName).get(genesetId).pvalc;
+					double pvalCorr = cpv[i];
 					double odds = enrichment.get(gmtName).get(genesetId).odds;
 					
 					HashSet<String> overlap = enrichment.get(gmtName).get(genesetId).overlap;
@@ -623,7 +655,7 @@ public class EnrichmentCore extends HttpServlet {
 						sb.append(odds).append(", ");
 						sb.append(-Math.log(pval)*odds).append(", ");
 						sb.append("[\"").append(geneListString).append("\"],");
-						sb.append(Math.min(1,pvalCorr/rank)).append(", 0, 0 ], ");
+						sb.append(Math.min(1,pvalCorr)).append(", 0, 0 ], ");
 						rank++;
 					}
 				}
