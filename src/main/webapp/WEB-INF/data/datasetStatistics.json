@@ -633,14 +633,14 @@
         {
             "geneCoverage": 12668,
             "genesPerTerm": 300.0,
-            "libraryName": "LINCS_L1000_Kinase_Perturbations_down",
+            "libraryName": "L1000_Kinase_and_GPCR_Perturbations_down",
             "link": "https://clue.io/",
             "numTerms": 3644
         },
         {
             "geneCoverage": 12638,
             "genesPerTerm": 300.0,
-            "libraryName": "LINCS_L1000_Kinase_Perturbations_up",
+            "libraryName": "L1000_Kinase_and_GPCR_Perturbations_up",
             "link": "https://clue.io/",
             "numTerms": 3644
         },
@@ -1140,6 +1140,55 @@
             "libraryName": "lncHUB_lncRNA_Co-Expression",
             "link": "https://amp.pharm.mssm.edu/lnchub/",
             "numTerms": 3729
-        } 
+        },
+        {
+            "numTerms": 6715,
+            "geneCoverage": 5605,
+            "genesPerTerm": 39,
+            "libraryName": "Virus-Host_PPI_P-HIPSTer_2020",
+            "link": "http://phipster.org/"
+        },
+        {
+            "numTerms": 1721,
+            "geneCoverage": 5718,
+            "genesPerTerm": 31,
+            "libraryName": "Elsevier_Pathway_Collection",
+            "link": "http://www.transgene.ru/disease-pathways/"
+        },
+        {
+            "numTerms": 802,
+            "geneCoverage": 14156,
+            "genesPerTerm": 40,
+            "libraryName": "Table_Mining_of_CRISPR_Studies",
+            "link": ""            
+        },
+        {
+            "numTerms": 205,
+            "geneCoverage": 16979,
+            "genesPerTerm": 295,            
+            "libraryName": "COVID-19_Related_Gene_Sets",
+            "link": "https://amp.pharm.mssm.edu/covid19"
+        },
+        {
+            "numTerms": 50,
+            "geneCoverage": 4383,
+            "genesPerTerm": 146,            
+            "libraryName": "MSigDB_Hallmark_2020",
+            "link": "https://www.gsea-msigdb.org/gsea/msigdb/collections.jsp "
+        },
+        {
+            "numTerms": 1482,
+            "geneCoverage": 54974,
+            "genesPerTerm": 483,            
+            "libraryName": "Enrichr_Users_Contributed_Lists_2020",
+            "link": "https://maayanlab.cloud/Enrichr"
+        },
+        {
+            "numTerms": 1190,
+            "geneCoverage": 12118,
+            "genesPerTerm": 448,            
+            "libraryName": "TG_GATES_2020",
+            "link": "https://toxico.nibiohn.go.jp/english/"            
+        }
     ]
 }
