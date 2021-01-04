@@ -304,6 +304,7 @@ public class EnrichmentCore extends HttpServlet {
 				
 				double[] pvs = new double[zip.length];
 				for(int i=0; i<zip.length; i++){
+					NameNumber zippair = zip[i];
 					int genesetId = zippair.name;
 					pvs[i] = enrichment.get(gmtName).get(genesetId).pval;
 				}
@@ -398,6 +399,7 @@ public class EnrichmentCore extends HttpServlet {
 				
 				double[] pvs = new double[zip.length];
 				for(int i=0; i<zip.length; i++){
+					NameNumber zippair = zip[i];
 					int genesetId = zippair.name;
 					pvs[i] = enrichment.get(gmtName).get(genesetId).pval;
 				}
@@ -628,6 +630,7 @@ public class EnrichmentCore extends HttpServlet {
 				
 				double[] pvs = new double[zip.length];
 				for(int i=0; i<zip.length; i++){
+					NameNumber zippair = zip[i];
 					int genesetId = zippair.name;
 					pvs[i] = enrichment.get(gmtName).get(genesetId).pval;
 				}
