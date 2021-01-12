@@ -1189,6 +1189,13 @@
             "genesPerTerm": 448,            
             "libraryName": "TG_GATES_2020",
             "link": "https://toxico.nibiohn.go.jp/english/"            
+        },
+        {
+            "numTerms": 766,
+            "geneCoverage": 12361,
+            "genesPerTerm": 124,              
+            "libraryName": "Allen_Brain_Atlas_10x_scRNA_2021",
+            "link": "https://portal.brain-map.org/"
         }
     ]
 }
