@@ -21,6 +21,8 @@ library = "TRANSFAC_and_JASPAR_PWMs"
 
 
 
+baseurl = "https://amp.pharm.mssm.edu/speedrichr/api/"
+
 payload = {
     'background': backgroundgenes,
 }

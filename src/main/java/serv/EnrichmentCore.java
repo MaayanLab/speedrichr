@@ -1056,7 +1056,6 @@ public class EnrichmentCore extends HttpServlet {
 		        bg.load(sql, (int)i);
 		        background.put(bg.name, bg);
 			}
-			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
