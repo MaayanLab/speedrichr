@@ -1,3 +1,4 @@
+#!/bin/sh
 #####################################
 #   AUTHOR: ALEXANDER LACHMANN      #
 #   DATE: 7/9/2019                 #
