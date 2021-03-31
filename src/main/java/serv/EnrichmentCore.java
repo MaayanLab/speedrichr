@@ -897,11 +897,10 @@ public class EnrichmentCore extends HttpServlet {
 
 					double pvalue = 1;
 					double oddsRatio = 1;
-
-					//double oddsRatio = (numOverlap*1.0/(gmtListSize))/(numGenelist*1.0/(totalBgGenes));
+					
 					if(a > 0){
 						pvalue = f.getRightTailedP(a, b, c, d);
-						oddsRatio = (1.0 * a * d) / (1.0 * b * c);
+						oddsRatio = (1.0 * a * d) / Math.max(1.0 * b * c, 1);
 					}
 					
 	    			if(numOverlap > 0 || pvalue < 0.05) {
