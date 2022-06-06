@@ -13,3 +13,4 @@
 *.war
 *.log
 .vscode/settings.json
+.gradle
