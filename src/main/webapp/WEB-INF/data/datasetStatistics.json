@@ -1736,7 +1736,16 @@
          "link":"https://hubmapconsortium.github.io/ccf-asct-reporter/",
          "appyter":"",
          "categoryId":5
-      }
+      },
+      {
+         "numTerms":350,
+         "geneCoverage":13697,
+         "genesPerTerm":343,
+         "libraryName":"FANTOM6_lncRNA_KD_DEGs",
+         "link":"https://fantom.gsc.riken.jp/6/",
+         "appyter":"",
+         "categoryId":1
+      }      
    ],
    "categories":[
       {
