@@ -6,7 +6,7 @@ This file should be extracted into the /src/main/webapp/WEB-INF/data/ folder.
 
 ## Building a new image and updating gene list files
 
-The data used by Speedrichr are stored directly in the docker image. To update or add a new GMT file the following steps have to be taken:
+The data used by Speedrichr are stored directly in the docker image. You can download the gmt files from an S3 bucket `s3://maayanlab-public/enrichr` (ask Daniel for access) To update or add a new GMT file the following steps have to be taken:
 
 1.  Update the file:
     /src/main/webapp/WEB-INF/data/datasetStatistics.json
