@@ -14,6 +14,8 @@ import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import util.Constants;
+
 public class GMTSerializer {
 
 	private static final BigDecimal TWO = BigDecimal.valueOf(2L);
@@ -101,7 +103,7 @@ public class GMTSerializer {
 		String line = "";
 		short idcounter = Short.MIN_VALUE;
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File("data/clean_genelist.tsv")));
+			BufferedReader br = new BufferedReader(new FileReader(new File(Constants.datafolder + "clean_genelist.tsv")));
 			while((line = br.readLine()) != null) {
 				String[] split = line.split("\t");
 				
@@ -129,9 +131,9 @@ public class GMTSerializer {
 			e.printStackTrace();
 		}
 		
-		serialize(genelists, "data/geneset.so");
-		serialize(dictionary, "data/dictionary.so");
-		serialize(revDictionary, "data/revdictionary.so");
+		serialize(genelists, Constants.datafolder + "geneset.so");
+		serialize(dictionary, Constants.datafolder + "dictionary.so");
+		serialize(revDictionary, Constants.datafolder + "revdictionary.so");
 	}
 	
 	public HashMap<String, Double> testWhitney() {
@@ -254,7 +256,7 @@ public class GMTSerializer {
 		HashMap<String, short[]> genesets = null;
 		try{   
             // Reading the object from a file
-            FileInputStream file = new FileInputStream("data/text.so");
+            FileInputStream file = new FileInputStream(Constants.datafolder + "text.so");
             ObjectInputStream in = new ObjectInputStream(file);
              
             // Method for deserialization of object

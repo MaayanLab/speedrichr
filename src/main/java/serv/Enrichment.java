@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+// import util.Constants;
+
 public class Enrichment {
 	
 	int threadCount = 2;
@@ -19,9 +21,9 @@ public class Enrichment {
 	String[] revDictionary = new String[Short.MAX_VALUE*2];
 	
 	public Enrichment() {
-		//genelists = (HashMap<String, short[]>) deserialize("data/geneset.so");
-		//dictionary = (HashMap<String, Short>) deserialize("data/dictionary.so");
-		//revDictionary = (String[]) deserialize("data/revDictionary.so");
+		//genelists = (HashMap<String, short[]>) deserialize("Constants.datafolder + "geneset.so");
+		//dictionary = (HashMap<String, Short>) deserialize("Constants.datafolder + "dictionary.so");
+		//revDictionary = (String[]) deserialize("Constants.datafolder + "revDictionary.so");
 	}
 	
 	public HashMap<String, Double> calculateEnrichment(short[] _genelist, String[] _uids) {

@@ -28,6 +28,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import jsp.Overlap;
+import util.Constants;
 
 /**
  * Servlet implementation class Test
@@ -138,9 +139,7 @@ public class EnrichmentCore extends HttpServlet {
 			StringBuffer sb = new StringBuffer();
 			
 			try{
-				String datafolder = "/usr/local/tomcat/webapps/speedrichr/WEB-INF/data/";
-
-				BufferedReader br = new BufferedReader(new FileReader(new File(datafolder+"datasetStatistics.json")));
+				BufferedReader br = new BufferedReader(new FileReader(new File(Constants.datafolder+"datasetStatistics.json")));
 				String line = ""; // read header
 				
 				while((line = br.readLine())!= null){
@@ -754,9 +753,7 @@ public class EnrichmentCore extends HttpServlet {
 		HashMap<String, String> hgncidmaprev = new HashMap<String, String>();
 		
 		try{
-			String datafolder = "/usr/local/tomcat/webapps/speedrichr/WEB-INF/data/";
-
-			BufferedReader br = new BufferedReader(new FileReader(new File(datafolder+"human_mapping_biomart.tsv")));
+			BufferedReader br = new BufferedReader(new FileReader(new File(Constants.datafolder + "human_mapping_biomart.tsv")));
 			String line = br.readLine(); // read header
 			
 			while((line = br.readLine())!= null){
@@ -1104,8 +1101,12 @@ public class EnrichmentCore extends HttpServlet {
 		gmts = new HashSet<GMT>();
 		
 		try { 
+			String datafolder = System.getenv("datafolder");
+			if (datafolder == null) {
+				datafolder = "/usr/local/tomcat/webapps/speedrichr/WEB-INF/data";
+			}
 			// create new file
-			File f = new File("/usr/local/tomcat/webapps/speedrichr/WEB-INF/data/genelibs");
+			File f = new File(datafolder+"/genelibs");
 			File[] files = f.listFiles();
 
 			int gmtid = 1;
