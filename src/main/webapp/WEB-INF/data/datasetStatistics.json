@@ -1745,6 +1745,24 @@
          "link":"https://fantom.gsc.riken.jp/6/",
          "appyter":"",
          "categoryId":1
+      },
+      {
+         "numTerms":1395,
+         "geneCoverage":2183,
+         "genesPerTerm":18,
+         "libraryName":"MAGMA_Drugs_and_Diseases",
+         "link":"https://github.com/nybell/drugsets/tree/main/DATA/GENESETS",
+         "appyter":"",
+         "categoryId":4
+      },
+      {
+         "numTerms":17326,
+         "geneCoverage":12765,
+         "genesPerTerm":13,
+         "libraryName":"PFOCR_Pathways",
+         "link":"https://www.wikipathways.org/index.php/Portal:PFOCR",
+         "appyter":"",
+         "categoryId":2
       }      
    ],
    "categories":[
