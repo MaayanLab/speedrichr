@@ -1763,7 +1763,16 @@
          "link":"https://www.wikipathways.org/index.php/Portal:PFOCR",
          "appyter":"",
          "categoryId":2
-      }      
+      },
+      {
+         "numTerms":469,
+         "geneCoverage":1509,
+         "genesPerTerm":100,
+         "libraryName":"tabula_sapiens",
+         "link":"https://tabula-sapiens-portal.ds.czbiohub.org/",
+         "appyter":"",
+         "categoryId":5
+      }       
    ],
    "categories":[
       {
