@@ -934,7 +934,7 @@
          "link":"http://amp.pharm.mssm.edu/Enrichr",
          "numTerms":645,
          "appyter":"af271913344aa08e6a755af1d433ef15768d749a",
-         "categoryId":1
+         "categoryId":7
       },
       {
          "geneCoverage":2243,
@@ -1772,7 +1772,25 @@
          "link":"https://tabula-sapiens-portal.ds.czbiohub.org/",
          "appyter":"",
          "categoryId":5
-      }       
+      },
+      {
+         "numTerms":757,
+         "geneCoverage":18365,
+         "genesPerTerm":1214,
+         "libraryName":"ChEA_2022",
+         "link":"https://maayanlab.cloud/chea3/",
+         "appyter":"",
+         "categoryId":1
+      },
+      {
+         "numTerms":601,
+         "geneCoverage":13525,
+         "genesPerTerm":175,
+         "libraryName":"Diabetes_Perturbations_GEO_2022",
+         "link":"https://appyters.maayanlab.cloud/#/Gene_Expression_T2D_Signatures",
+         "appyter":"",
+         "categoryId":4
+      }
    ],
    "categories":[
       {
