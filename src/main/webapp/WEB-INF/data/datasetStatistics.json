@@ -268,7 +268,7 @@
          "link":"http://www.broadinstitute.org/cmap/",
          "numTerms":6100,
          "appyter":"9041f90cccbc18479138330228b336265e09021c",
-         "categoryId":4
+         "categoryId":7
       },
       {
          "geneCoverage":8695,
@@ -277,7 +277,7 @@
          "link":"http://www.broadinstitute.org/cmap/",
          "numTerms":6100,
          "appyter":"ebc0d905b3b3142f936d400c5f2a4ff926c81c37",
-         "categoryId":4
+         "categoryId":7
       },
       {
          "geneCoverage":1759,
@@ -691,7 +691,7 @@
          "link":"https://clue.io/",
          "numTerms":33132,
          "appyter":"5e678b3debe8d8ea95187d0cd35c914017af5eb3",
-         "categoryId":4
+         "categoryId":7
       },
       {
          "geneCoverage":9448,
@@ -700,7 +700,7 @@
          "link":"https://clue.io/",
          "numTerms":33132,
          "appyter":"fedbf5e221f45ee60ebd944f92569b5eda7f2330",
-         "categoryId":4
+         "categoryId":7
       },
       {
          "geneCoverage":16725,
@@ -799,7 +799,7 @@
          "link":"https://clue.io/",
          "numTerms":96,
          "appyter":"957846cb05ef31fc8514120516b73cc65af7980e",
-         "categoryId":4
+         "categoryId":7
       },
       {
          "geneCoverage":3357,
@@ -808,7 +808,7 @@
          "link":"https://clue.io/",
          "numTerms":96,
          "appyter":"3bd494146c98d8189898a947f5ef5710f1b7c4b2",
-         "categoryId":4
+         "categoryId":7
       },
       {
          "geneCoverage":12668,
@@ -817,7 +817,7 @@
          "link":"https://clue.io/",
          "numTerms":3644,
          "appyter":"1ccc5bce553e0c2279f8e3f4ddcfbabcf566623b",
-         "categoryId":2
+         "categoryId":7
       },
       {
          "geneCoverage":12638,
@@ -826,7 +826,7 @@
          "link":"https://clue.io/",
          "numTerms":3644,
          "appyter":"b54a0d4ba525eac4055c7314ca9d9312adcb220c",
-         "categoryId":2
+         "categoryId":7
       },
       {
          "geneCoverage":8973,
