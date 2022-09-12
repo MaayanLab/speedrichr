@@ -1790,6 +1790,24 @@
          "link":"https://appyters.maayanlab.cloud/#/Gene_Expression_T2D_Signatures",
          "appyter":"",
          "categoryId":4
+      },
+      {
+         "numTerms":10850,
+         "geneCoverage": 9525,
+         "genesPerTerm":245,
+         "libraryName":"LINCS_L1000_Chem_Pert_Consensus_Sigs",
+         "link":"https://maayanlab.cloud/sigcom-lincs/#/Download",
+         "appyter":"",
+         "categoryId":4
+      },
+      {
+         "numTerms":10424,
+         "geneCoverage":9440,
+         "genesPerTerm":245,
+         "libraryName":"LINCS_L1000_CRISPR_KO_Consensus_Sigs",
+         "link":"https://maayanlab.cloud/sigcom-lincs/#/Download",
+         "appyter":"",
+         "categoryId":4
       }
    ],
    "categories":[
