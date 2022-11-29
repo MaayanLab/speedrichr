@@ -835,7 +835,7 @@
          "link":"http://www.reactome.org/download/index.html",
          "numTerms":1530,
          "appyter":"1f54638e8f45075fb79489f0e0ef906594cb0678",
-         "categoryId":2
+         "categoryId":7
       },
       {
          "geneCoverage":7010,
@@ -1808,6 +1808,24 @@
          "link":"https://maayanlab.cloud/sigcom-lincs/#/Download",
          "appyter":"",
          "categoryId":4
+      },
+      {
+         "numTerms":106,
+         "geneCoverage":3857,
+         "genesPerTerm":80,
+         "libraryName":"Tabula_Muris",
+         "link":"https://tabula-muris.ds.czbiohub.org/",
+         "appyter":"",
+         "categoryId":5
+      },
+      {
+         "numTerms":1818,
+         "geneCoverage":10489,
+         "genesPerTerm":61,
+         "libraryName":"Reactome_2022",
+         "link":"https://reactome.org/download-data",
+         "appyter":"",
+         "categoryId":2
       }
    ],
    "categories":[
