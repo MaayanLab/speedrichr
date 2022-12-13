@@ -1826,6 +1826,51 @@
          "link":"https://reactome.org/download-data",
          "appyter":"",
          "categoryId":2
+      },
+      {
+         "numTerms":118,
+         "geneCoverage":1198,
+         "genesPerTerm":23,
+         "libraryName":"SynGO",
+         "link":"https://www.syngoportal.org/",
+         "appyter":"",
+         "categoryId":3
+      },
+      {
+         "numTerms":338,
+         "geneCoverage":1882,
+         "genesPerTerm":47,
+         "libraryName":"GlyGen",
+         "link":"https://www.glygen.org/",
+         "appyter":"",
+         "categoryId":2
+      },
+      {
+         "numTerms":888,
+         "geneCoverage":1552,
+         "genesPerTerm":16,
+         "libraryName":"IDG",
+         "link":"https://drugcentral.org/",
+         "appyter":"",
+         "categoryId":4
+      },
+      {
+         "numTerms":529,
+         "geneCoverage":6713,
+         "genesPerTerm":68,
+         "libraryName":"KOMP2",
+         "link":"https://www.mousephenotype.org/",
+         "appyter":"",
+         "categoryId":3
+      },
+      {
+         "numTerms":233,
+         "geneCoverage":936,
+         "genesPerTerm":15,
+         "libraryName":"Metabolomics_Workbench",
+         "link":"https://www.metabolomicsworkbench.org/",
+         "appyter":"",
+         "categoryId":2
       }
    ],
    "categories":[
