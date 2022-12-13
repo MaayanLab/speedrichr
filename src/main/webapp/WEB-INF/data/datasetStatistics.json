@@ -1840,7 +1840,7 @@
          "numTerms":338,
          "geneCoverage":1882,
          "genesPerTerm":47,
-         "libraryName":"GlyGen",
+         "libraryName":"GlyGen_Glycosylated_Proteins",
          "link":"https://www.glygen.org/",
          "appyter":"",
          "categoryId":2
@@ -1849,7 +1849,7 @@
          "numTerms":888,
          "geneCoverage":1552,
          "genesPerTerm":16,
-         "libraryName":"IDG",
+         "libraryName":"IDG_Drug_Targets",
          "link":"https://drugcentral.org/",
          "appyter":"",
          "categoryId":4
@@ -1858,7 +1858,7 @@
          "numTerms":529,
          "geneCoverage":6713,
          "genesPerTerm":68,
-         "libraryName":"KOMP2",
+         "libraryName":"KOMP2_Mouse_Phenotypes",
          "link":"https://www.mousephenotype.org/",
          "appyter":"",
          "categoryId":3
@@ -1867,7 +1867,7 @@
          "numTerms":233,
          "geneCoverage":936,
          "genesPerTerm":15,
-         "libraryName":"Metabolomics_Workbench",
+         "libraryName":"Metabolomics_Workbench_Metabolites",
          "link":"https://www.metabolomicsworkbench.org/",
          "appyter":"",
          "categoryId":2
