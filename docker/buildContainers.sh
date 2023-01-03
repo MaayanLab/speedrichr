@@ -8,7 +8,8 @@
 now=$(date +"%T")
 echo "Current time : $now"
 echo "------------------------------------"
-
+# Ensure that you have s3 privileges
+aws s3 cp --recursive s3://maayanlab-public/enrichr/ ../src/main/webapp/WEB-INF/data/genelibs
 cd ..
 ./gradlew build
 
