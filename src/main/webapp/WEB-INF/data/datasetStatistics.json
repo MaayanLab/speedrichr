@@ -1881,6 +1881,16 @@
          "appyter":"",
          "categoryId":4
 
+      },
+      {
+         "numTerms":303,
+         "geneCoverage":9021,
+         "genesPerTerm":793,
+         "libraryName": "serine_threonine_kinome_atlas_2023",
+         "link": "",
+         "appyter":"",
+         "categoryId":2
+
       }
    ],
    "categories":[
