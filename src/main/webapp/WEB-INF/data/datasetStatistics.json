@@ -1897,9 +1897,9 @@
          "geneCoverage":8076,
          "genesPerTerm":96,
          "libraryName": "GTEx_Tissues_V8_2023",
-         "link": "https://kinase-library.phosphosite.org/site",
-         "appyter":"https://gtexportal.org/home/",
-         "categoryId":4
+         "link": "https://gtexportal.org/home/",
+         "appyter":"",
+         "categoryId":5
 
       }
    ],
