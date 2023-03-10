@@ -1886,10 +1886,20 @@
          "numTerms":303,
          "geneCoverage":9021,
          "genesPerTerm":793,
-         "libraryName": "serine_threonine_kinome_atlas_2023",
+         "libraryName": "Serine_Threonine_Kinome_Atlas_2023",
          "link": "https://kinase-library.phosphosite.org/site",
          "appyter":"",
          "categoryId":2
+
+      },
+      {
+         "numTerms":511,
+         "geneCoverage":8076,
+         "genesPerTerm":96,
+         "libraryName": "GTEx_Tissues_V8_2023",
+         "link": "https://kinase-library.phosphosite.org/site",
+         "appyter":"https://gtexportal.org/home/",
+         "categoryId":4
 
       }
    ],
