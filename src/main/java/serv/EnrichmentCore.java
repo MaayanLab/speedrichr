@@ -950,11 +950,11 @@ public class EnrichmentCore extends HttpServlet {
 							filteredGmtSize++;
 						}
 					}
-					
-					int numGenelist = _geneset.length;
-	    			int totalBgGenes = 20000;
-	    			int gmtListSize =  gmtlist.genearray.length;
-	    			int numOverlap = overlap.size();
+
+					int numGenelist = genesetSet.size();
+					int totalBgGenes = _background.size();
+					int gmtListSize =  filteredGmtSize;
+					int numOverlap = overlap.size();
 					
 					int a = numOverlap;
 					int b = gmtListSize - numOverlap;
