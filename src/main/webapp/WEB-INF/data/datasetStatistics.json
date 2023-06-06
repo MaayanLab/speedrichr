@@ -1294,7 +1294,7 @@
          "link":"https://www.ebi.ac.uk/gwas",
          "numTerms":1737,
          "appyter":"fef3864bcb5dd9e60cee27357eff30226116c49b",
-         "categoryId":4
+         "categoryId":7
       },
       {
          "geneCoverage":6201,
@@ -1762,7 +1762,7 @@
          "libraryName":"PFOCR_Pathways",
          "link":"https://pfocr.wikipathways.org/",
          "appyter":"",
-         "categoryId":2
+         "categoryId":7
       },
       {
          "numTerms":469,
@@ -1928,6 +1928,41 @@
          "link":"http://www.geneontology.org/",
          "appyter":"",
          "categoryId":3
+      },
+      {
+         "numTerms":21845,
+         "geneCoverage":13662,
+         "genesPerTerm":12,
+         "libraryName":"PFOCR_Pathways_2023",
+         "link":"https://pfocr.wikipathways.org/",
+         "appyter":"",
+         "categoryId":2
+      },
+      {
+         "geneCoverage":18290,
+         "genesPerTerm":34,
+         "libraryName":"GWAS_Catalog_2023",
+         "link":"https://www.ebi.ac.uk/gwas",
+         "numTerms":5271,
+         "categoryId":4
+      },
+      {
+         "numTerms":2388,
+         "geneCoverage":12081,
+         "genesPerTerm":50,
+         "libraryName":"GeDiPNet_2023",
+         "link":"http://gedipnet.bicnirrh.res.in/",
+         "appyter":"",
+         "categoryId":4
+      },
+      {
+         "numTerms":72,
+         "geneCoverage":12853,
+         "genesPerTerm":485,
+         "libraryName":"MAGNET_2023",
+         "link":"https://magnet-winterlab.herokuapp.com/",
+         "appyter":"",
+         "categoryId":5
       }
    ],
    "categories":[
