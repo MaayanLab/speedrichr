@@ -451,6 +451,110 @@ public class EnrichmentCore extends HttpServlet {
 			out.write(json);
 
 			System.out.println("Elapsed time: "+(System.currentTimeMillis() - time));
+		} else if(pathInfo.matches("^/backgroundexport")){
+			long time = System.currentTimeMillis();
+
+			int genelistid = Integer.parseInt(request.getParameter("userListId"));
+			String hvs = Integer.toHexString(genelistid);
+
+			String backgroundid = request.getParameter("backgroundid");
+			String library = request.getParameter("backgroundType");
+			
+			String[] genes = listcache.get(hvs);
+			HashSet<String> backgroundgenes = backgroundcache.get(backgroundid);
+			
+			HashMap<String, HashMap<Integer, Overlap>> enrichment = new HashMap<String, HashMap<Integer, Overlap>>();
+			
+			HashSet<String> gmt_strings = new HashSet<String>();
+			gmt_strings.add(library);
+			
+			for(GMT gmt : gmts){
+				if(gmt_strings.contains(gmt.name)){
+					enrichment.put(gmt.name, calculateEnrichmentLib(genes, gmt.name, backgroundgenes));
+				}
+			}
+			
+			StringBuffer sb = new StringBuffer();
+			sb.append("Term\tOverlap\tP-value\tAdjusted P-value\tOld P-value\tOld Adjusted P-value\tOdds Ratio\tCombined Score\tGenes\n");
+
+
+			for(String gmtName : enrichment.keySet()){
+
+				Integer[] enrStrings = enrichment.get(gmtName).keySet().toArray(new Integer[0]);
+				System.out.println("The number of genesets: "+enrStrings.length);
+				double[] pvals = new double[enrStrings.length];
+				int count = 0;
+				for(int i : enrStrings){
+					pvals[count] = enrichment.get(gmtName).get(i).pval;
+					count++;
+				}
+
+				NameNumber [] zip = new NameNumber[Math.min(enrStrings.length, pvals.length)];
+				for(int i = 0; i < zip.length; i++){
+					zip[i] = new NameNumber(enrStrings[i], pvals[i]);
+				}
+
+				Arrays.sort(zip, new Comparator<NameNumber>() {
+					@Override
+					public int compare(NameNumber o1, NameNumber o2) {
+						return Double.compare(o1.number, o2.number);
+					}
+				});
+				
+				double[] pvs = new double[zip.length];
+				for(int i=0; i<zip.length; i++){
+					NameNumber zippair = zip[i];
+					int genesetId = zippair.name;
+					pvs[i] = enrichment.get(gmtName).get(genesetId).pval;
+				}
+				FDR fdr = new FDR(pvs);
+				fdr.calculate();
+				double[] cpv = fdr.getAdjustedPvalues();
+
+				int rank = 1;
+				for(int i=0; i<zip.length; i++){
+					NameNumber zippair = zip[i];
+					int genesetId = zippair.name;
+					String genesetName = enrichment.get(gmtName).get(genesetId).name;
+
+					double pval = enrichment.get(gmtName).get(genesetId).pval;
+					double pvalCorr = cpv[i];
+					double odds = enrichment.get(gmtName).get(genesetId).odds;
+					
+					HashSet<String> overlap = enrichment.get(gmtName).get(genesetId).overlap;
+					String[] overArr = overlap.toArray(new String[0]);
+					String geneListString = String.join(";", overArr);
+					
+					
+					if(pval < 0.05 || overlap.size() > 0){
+
+						sb.append( genesetName ).append("\t");
+						sb.append( overArr.length ).append( "/" ).append( enrichment.get(gmtName).get(genesetId).gmtlistsize ).append("\t");
+						sb.append( pval ).append("\t");
+						sb.append( Math.min(1,pvalCorr) ).append("\t");
+						sb.append( 0 ).append("\t");
+						sb.append( 0 ).append("\t");
+						sb.append( odds ).append("\t");
+						sb.append( -Math.log(pval)*odds ).append("\t");
+						sb.append( geneListString ).append("\n");
+						rank++;
+					}
+				}
+			}
+
+			String json = sb.toString();
+			String filename = "enrichr";
+			response.setHeader("Pragma", "public");
+			response.setHeader("Expires", "0");
+			response.setHeader("Cache-Control", "must-revalidate, post-check=0, pre-check=0");
+			response.setContentType("application/octet-stream");
+			response.setHeader("Content-Disposition", "attachment; filename=\"" + filename + ".txt\"");
+			response.setHeader("Content-Transfer-Encoding", "binary");
+
+			PrintWriter out = response.getWriter();
+			out.write(json);
+
+			System.out.println("Elapsed time: "+(System.currentTimeMillis() - time));
 		}
 		else {
 			PrintWriter out = response.getWriter();
