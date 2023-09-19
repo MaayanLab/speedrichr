@@ -1964,6 +1964,15 @@
          "link":"https://magnet-winterlab.herokuapp.com/",
          "appyter":"",
          "categoryId":5
+      },
+      {
+         "numTerms":1425,
+         "geneCoverage":3712,
+         "genesPerTerm":9,
+         "libraryName":"Azimuth_2023",
+         "link":"https://magnet-winterlab.herokuapp.com/",
+         "appyter":"",
+         "categoryId":5
       }
    ],
    "categories":[
