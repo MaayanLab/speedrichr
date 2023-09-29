@@ -1973,6 +1973,33 @@
          "link":"https://azimuth.hubmapconsortium.org/",
          "appyter":"",
          "categoryId":5
+      },
+      {
+         "numTerms":3810,
+         "geneCoverage":19178,
+         "genesPerTerm":218,
+         "libraryName":"Rummagene_kinases",
+         "link":"https://rummagene.com/",
+         "appyter":"",
+         "categoryId":2
+      },
+      {
+         "numTerms":9086,
+         "geneCoverage":19402,
+         "genesPerTerm":267,
+         "libraryName":"Rummagene_transcription_factors",
+         "link":"https://rummagene.com/",
+         "appyter":"",
+         "categoryId":1
+      },
+      {
+         "numTerms":11130,
+         "geneCoverage":19434,
+         "genesPerTerm":369,
+         "libraryName":"Rummagene_signatures",
+         "link":"https://rummagene.com/",
+         "appyter":"",
+         "categoryId":4
       }
    ],
    "categories":[
