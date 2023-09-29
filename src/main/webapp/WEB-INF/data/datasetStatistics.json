@@ -1999,7 +1999,16 @@
          "libraryName":"Rummagene_signatures",
          "link":"https://rummagene.com/",
          "appyter":"",
-         "categoryId":4
+         "categoryId":8
+      },
+      {
+         "numTerms":225,
+         "geneCoverage":10428,
+         "genesPerTerm":115,
+         "libraryName":"MoTrPAC_2023",
+         "link":"https://motrpac-data.org/",
+         "appyter":"",
+         "categoryId":5
       }
    ],
    "categories":[
