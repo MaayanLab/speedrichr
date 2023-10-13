@@ -2012,7 +2012,7 @@
       },
       {
          "numTerms":801,
-         "geneCoverage":2044,
+         "geneCoverage":8044,
          "genesPerTerm":42,
          "libraryName":"WikiPathway_2023_Human",
          "link":"https://www.wikipathways.org/",
