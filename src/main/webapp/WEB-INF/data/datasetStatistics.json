@@ -1564,7 +1564,7 @@
          "libraryName":"WikiPathway_2021_Human",
          "link":"https://www.wikipathways.org/",
          "appyter":"",
-         "categoryId":2
+         "categoryId":7
       },
       {
          "numTerms":344,
@@ -2009,6 +2009,15 @@
          "link":"https://motrpac-data.org/",
          "appyter":"",
          "categoryId":5
+      },
+      {
+         "numTerms":801,
+         "geneCoverage":2044,
+         "genesPerTerm":42,
+         "libraryName":"WikiPathway_2023_Human",
+         "link":"https://www.wikipathways.org/",
+         "appyter":"",
+         "categoryId":2
       }
    ],
    "categories":[
