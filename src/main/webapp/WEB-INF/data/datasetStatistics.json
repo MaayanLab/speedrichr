@@ -1730,7 +1730,7 @@
       },
       {
          "numTerms":777,
-         "geneCoverage":13370,
+         "geneCoverage":13366,
          "genesPerTerm":103,
          "libraryName":"HuBMAP_ASCTplusB_augmented_2022",
          "link":"https://hubmapconsortium.github.io/ccf-asct-reporter/",
