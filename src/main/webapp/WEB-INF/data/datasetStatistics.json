@@ -2018,6 +2018,15 @@
          "link":"https://www.wikipathways.org/",
          "appyter":"",
          "categoryId":2
+      },
+      {
+         "numTerms":134,
+         "geneCoverage":1555,
+         "genesPerTerm":27,
+         "libraryName":"SynGO_2024",
+         "link":"https://www.syngoportal.org/",
+         "appyter":"",
+         "categoryId":3
       }
    ],
    "categories":[
