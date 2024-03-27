@@ -2027,6 +2027,15 @@
          "link":"https://www.syngoportal.org/",
          "appyter":"",
          "categoryId":3
+      },
+      {
+         "numTerms": 1692,
+         "geneCoverage": 12642,
+         "genesPerTerm": 30,
+         "libraryName": "CellMarker_2024",
+         "link": "http://bio-bigdata.hrbmu.edu.cn/CellMarker/",
+         "appyter": "",
+         "categoryId": 5
       }
    ],
    "categories":[
