@@ -1366,7 +1366,7 @@
          "link":"https://depmap.org/",
          "numTerms":558,
          "appyter":"0b08b32b20854ac8a738458728a9ea50c2e04800",
-         "categoryId":4
+         "categoryId":7
       },
       {
          "geneCoverage":6204,
@@ -2018,6 +2018,15 @@
          "link":"https://www.wikipathways.org/",
          "appyter":"",
          "categoryId":2
+      },
+      {
+         "numTerms":1093,
+         "geneCoverage":9711,
+         "genesPerTerm":414,
+         "libraryName":"DepMap_CRISPR_GeneDependency_CellLines_2023",
+         "link":"https://depmap.org/",
+         "appyter":"",
+         "categoryId":4
       },
       {
          "numTerms":134,
