@@ -2045,6 +2045,15 @@
          "link": "http://bio-bigdata.hrbmu.edu.cn/CellMarker/",
          "appyter": "",
          "categoryId": 5
+      },
+      {
+         "numTerms":659,
+         "geneCoverage":2513,
+         "genesPerTerm":20,
+         "libraryName":"DGIDB_Drug_Targets_2024",
+         "link":"https://depmap.org/",
+         "appyter":"",
+         "categoryId":4
       }
    ],
    "categories":[
