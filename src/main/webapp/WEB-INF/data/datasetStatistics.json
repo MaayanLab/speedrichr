@@ -2050,7 +2050,7 @@
          "numTerms":659,
          "geneCoverage":2513,
          "genesPerTerm":20,
-         "libraryName":"DGIDB_Drug_Targets_2024",
+         "libraryName":"DGIdb_Drug_Targets_2024",
          "link":"https://dgidb.org/",
          "appyter":"",
          "categoryId":4
