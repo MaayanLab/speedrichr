@@ -9,11 +9,11 @@ now=$(date +"%T")
 echo "Current time : $now"
 echo "------------------------------------"
 # Ensure that you have s3 privileges
-aws s3 cp --recursive s3://maayanlab-public/enrichr/ ../src/main/webapp/WEB-INF/data/genelibs
+# aws s3 cp --recursive s3://maayanlab-public/enrichr/ ../src/main/webapp/WEB-INF/data/genelibs
 cd ..
 ./gradlew build
 
 cd docker
 
-docker build -f DockerfileAPI -t maayanlab/speedrichr:1.86 .
-docker push maayanlab/speedrichr:1.86
+docker build -f DockerfileAPI -t maayanlab/speedrichr:1.87 .
+docker push maayanlab/speedrichr:1.87
