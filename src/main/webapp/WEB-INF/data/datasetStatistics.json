@@ -541,15 +541,6 @@
          "categoryId":7
       },
       {
-         "geneCoverage":2541,
-         "genesPerTerm":39.0,
-         "libraryName":"NCI-Nature_2015",
-         "link":"http://pid.nci.nih.gov/",
-         "numTerms":209,
-         "appyter":"47edfc012bcbb368a10b717d8dca103f7814b5a4",
-         "categoryId":7
-      },
-      {
          "geneCoverage":1918,
          "genesPerTerm":39.0,
          "libraryName":"Panther_2015",
@@ -904,7 +895,7 @@
          "geneCoverage":2541,
          "genesPerTerm":39.0,
          "libraryName":"NCI-Nature_2016",
-         "link":"http://pid.nci.nih.gov/",
+         "link":"https://www.ndexbio.org/index.html#/networkset/7bc65b82-2a2f-11ed-ac45-0ac135e8bacf",
          "numTerms":209,
          "appyter":"3c1e1f7d1a651d9aaa198e73704030716fc09431",
          "categoryId":2
