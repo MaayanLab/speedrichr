@@ -1600,7 +1600,7 @@
          "libraryName":"MGI_Mammalian_Phenotype_Level_4_2021",
          "link":"http://www.informatics.jax.org/",
          "appyter":"",
-         "categoryId":3
+         "categoryId":7
       },
       {
          "numTerms":1097,
@@ -2045,6 +2045,15 @@
          "link":"https://dgidb.org/",
          "appyter":"",
          "categoryId":4
+      },
+      {
+         "numTerms":5003,
+         "geneCoverage":11625,
+         "genesPerTerm":36,
+         "libraryName":"MGI_Mammalian_Phenotype_Level_4_2024",
+         "link":"http://www.informatics.jax.org/",
+         "appyter":"",
+         "categoryId":3
       }
    ],
    "categories":[
