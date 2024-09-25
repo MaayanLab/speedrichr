@@ -2008,7 +2008,7 @@
          "libraryName":"WikiPathway_2023_Human",
          "link":"https://www.wikipathways.org/",
          "appyter":"",
-         "categoryId":2
+         "categoryId":7
       },
       {
          "numTerms":1093,
@@ -2054,6 +2054,24 @@
          "link":"http://www.informatics.jax.org/",
          "appyter":"",
          "categoryId":3
+      },
+      {
+         "numTerms":188,
+         "geneCoverage":4494,
+         "genesPerTerm":51,
+         "libraryName":"WikiPathways_2024_Mouse",
+         "link":"https://www.wikipathways.org/",
+         "appyter":"",
+         "categoryId":2
+      },
+      {
+         "numTerms":829,
+         "geneCoverage":8281,
+         "genesPerTerm":43,
+         "libraryName":"WikiPathways_2024_Human",
+         "link":"https://www.wikipathways.org/",
+         "appyter":"",
+         "categoryId":2
       }
    ],
    "categories":[
