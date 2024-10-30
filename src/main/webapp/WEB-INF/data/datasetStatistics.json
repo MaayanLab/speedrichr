@@ -1880,7 +1880,7 @@
          "libraryName": "The_Kinase_Library_2023",
          "link": "https://kinase-library.phosphosite.org/site",
          "appyter":"",
-         "categoryId":2
+         "categoryId":7
 
       },
       {
@@ -2072,6 +2072,16 @@
          "link":"https://www.wikipathways.org/",
          "appyter":"",
          "categoryId":2
+      },
+      {
+         "numTerms":392,
+         "geneCoverage":9122,
+         "genesPerTerm":627,
+         "libraryName": "The_Kinase_Library_2024",
+         "link": "https://kinase-library.phosphosite.org/site",
+         "appyter":"",
+         "categoryId":2
+
       }
    ],
    "categories":[
