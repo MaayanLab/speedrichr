@@ -1816,7 +1816,7 @@
          "libraryName":"Reactome_2022",
          "link":"https://reactome.org/download-data",
          "appyter":"",
-         "categoryId":2
+         "categoryId":7
       },
       {
          "numTerms":118,
@@ -2092,6 +2092,15 @@
          "appyter":"",
          "categoryId":4
 
+      },
+      {
+         "numTerms":2105,
+         "geneCoverage":11671,
+         "genesPerTerm":62,
+         "libraryName":"Reactome_Pathways_2024",
+         "link":"https://reactome.org/download-data",
+         "appyter":"",
+         "categoryId":2
       }
    ],
    "categories":[
