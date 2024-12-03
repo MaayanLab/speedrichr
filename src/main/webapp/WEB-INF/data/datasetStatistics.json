@@ -1999,7 +1999,7 @@
          "libraryName":"MoTrPAC_2023",
          "link":"https://motrpac-data.org/",
          "appyter":"",
-         "categoryId":5
+         "categoryId":4
       },
       {
          "numTerms":801,
@@ -2081,6 +2081,16 @@
          "link": "https://kinase-library.phosphosite.org/site",
          "appyter":"",
          "categoryId":2
+
+      },
+      {
+         "numTerms":12841,
+         "geneCoverage":16971,
+         "genesPerTerm":76,
+         "libraryName": "PerturbAtlas",
+         "link": "https://perturbatlas.kratoss.site/#/",
+         "appyter":"",
+         "categoryId":4
 
       }
    ],
