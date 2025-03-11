@@ -1900,7 +1900,7 @@
          "libraryName":"GO_Biological_Process_2023",
          "link":"http://www.geneontology.org/",
          "appyter":"",
-         "categoryId":3
+         "categoryId":7
       },
       {
          "numTerms":474,
@@ -1909,7 +1909,7 @@
          "libraryName":"GO_Cellular_Component_2023",
          "link":"http://www.geneontology.org/",
          "appyter":"",
-         "categoryId":3
+         "categoryId":7
       },
       {
          "numTerms":1147,
@@ -1918,7 +1918,7 @@
          "libraryName":"GO_Molecular_Function_2023",
          "link":"http://www.geneontology.org/",
          "appyter":"",
-         "categoryId":3
+         "categoryId":7
       },
       {
          "numTerms":21845,
@@ -2101,6 +2101,33 @@
          "link":"https://reactome.org/download-data",
          "appyter":"",
          "categoryId":2
+      },
+      {
+         "numTerms":5343,
+         "geneCoverage":14674,
+         "genesPerTerm":32,
+         "libraryName":"GO_Biological_Process_2025",
+         "link":"http://www.geneontology.org/",
+         "appyter":"",
+         "categoryId":3
+      },
+      {
+         "numTerms":468,
+         "geneCoverage":11501,
+         "genesPerTerm":90,
+         "libraryName":"GO_Cellular_Component_2025",
+         "link":"http://www.geneontology.org/",
+         "appyter":"",
+         "categoryId":3
+      },
+      {
+         "numTerms":1174,
+         "geneCoverage":11484,
+         "genesPerTerm":36,
+         "libraryName":"GO_Molecular_Function_2025",
+         "link":"http://www.geneontology.org/",
+         "appyter":"",
+         "categoryId":3
       }
    ],
    "categories":[
