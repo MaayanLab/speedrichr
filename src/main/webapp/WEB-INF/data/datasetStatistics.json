@@ -2133,7 +2133,7 @@
          "numTerms":5412,
          "geneCoverage":12033,
          "genesPerTerm":158,
-         "libraryName":"DRUGseq_2025_up",
+         "libraryName":"DRUGseqr_2025_up",
          "link":"",
          "appyter":"",
          "categoryId":4
@@ -2142,7 +2142,7 @@
          "numTerms":4503,
          "geneCoverage":10641,
          "genesPerTerm":201,
-         "libraryName":"DRUGseq_2025_down",
+         "libraryName":"DRUGseqr_2025_down",
          "link":"",
          "appyter":"",
          "categoryId":4
