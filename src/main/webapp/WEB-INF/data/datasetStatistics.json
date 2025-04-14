@@ -2146,6 +2146,22 @@
          "link":"",
          "appyter":"",
          "categoryId":4
+      },
+      {
+         "geneCoverage":3741,
+         "genesPerTerm":63,
+         "libraryName":"NIBR_Jensen_DISEASES_Curated_2025",
+         "link":"http://diseases.jensenlab.org/",
+         "numTerms":574,
+         "categoryId":3
+      },
+      {
+         "geneCoverage":10631,
+         "genesPerTerm":343,
+         "libraryName":"Jensen_DISEASES_Experimental_2025",
+         "link":"http://diseases.jensenlab.org/",
+         "numTerms":500,
+         "categoryId":3
       }
    ],
    "categories":[
