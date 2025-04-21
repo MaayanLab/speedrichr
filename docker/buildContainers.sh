@@ -15,5 +15,5 @@ cd ..
 
 cd docker
 
-docker build -f DockerfileAPI -t maayanlab/speedrichr:1.102 .
-docker push maayanlab/speedrichr:1.102
+docker build -f DockerfileAPI -t maayanlab/speedrichr:1.104 .
+docker push maayanlab/speedrichr:1.104
