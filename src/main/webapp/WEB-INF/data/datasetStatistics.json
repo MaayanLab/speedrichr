@@ -2150,7 +2150,7 @@
       {
          "geneCoverage":3741,
          "genesPerTerm":63,
-         "libraryName":"ensen_DISEASES_Curated_2025",
+         "libraryName":"Jensen_DISEASES_Curated_2025",
          "link":"http://diseases.jensenlab.org/",
          "numTerms":574,
          "categoryId":3,
