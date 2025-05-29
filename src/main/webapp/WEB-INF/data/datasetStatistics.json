@@ -2164,7 +2164,70 @@
          "numTerms":500,
          "categoryId":3,
          "appyter": ""
-      }
+      },
+      {
+         "geneCoverage": 12865,
+         "genesPerTerm": 116,
+         "libraryName": "COMPARTMENTS_Curated2025",
+         "link": "https://compartments.jensenlab.org/Search",
+         "numTerms": 1015,
+         "categoryId": 3,
+         "appyter": ""
+     },
+     {
+         "geneCoverage": 15733,
+         "genesPerTerm": 68,
+         "libraryName": "PerturbAtlas_MouseGenePerturbationSigs",
+         "link": "https://perturbatlas.kratoss.site/#/",
+         "numTerms": 10729,
+         "categoryId": 4,
+         "appyter": ""
+     },
+     {
+         "geneCoverage": 7724,
+         "genesPerTerm": 83,
+         "libraryName": "PerturbSeq_ReplogleK562",
+         "link": "https://gwps.wi.mit.edu/",
+         "numTerms": 4102,
+         "categoryId": 4,
+         "appyter": ""
+     },
+     {
+         "geneCoverage": 14528,
+         "genesPerTerm": 1232,
+         "libraryName": "TISSUES_Experimental2025",
+         "link": "https://tissues.jensenlab.org/Search",
+         "numTerms": 218,
+         "categoryId": 3,
+         "appyter": ""
+     },
+     {
+         "geneCoverage": 5961,
+         "genesPerTerm": 643,
+         "libraryName": "COMPARTMENTS_Experimental2025",
+         "link": "https://compartments.jensenlab.org/Search",
+         "numTerms": 48,
+         "categoryId": 3,
+         "appyter": ""
+     },
+     {
+         "geneCoverage": 6999,
+         "genesPerTerm": 68,
+         "libraryName": "PerturbSeq_ReplogleRPE1",
+         "link": "https://gwps.wi.mit.edu/",
+         "numTerms": 2708,
+         "categoryId": 4,
+         "appyter": ""
+     },
+     {
+         "geneCoverage": 16211,
+         "genesPerTerm": 737,
+         "libraryName": "TISSUES_Curated2025",
+         "link": "https://tissues.jensenlab.org/Search",
+         "numTerms": 417,
+         "categoryId": 3,
+         "appyter": ""
+     }
    ],
    "categories":[
       {
